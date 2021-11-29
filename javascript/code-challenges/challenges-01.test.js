@@ -26,10 +26,12 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 
 const addExclamation = (arr) => {
   const localArray = [];
+  // Use `forEach` to loop over the input array.
   arr.forEach(str => {
- localArray.push(str + '!');
+    localArray.push(str + '!');
   });
   return localArray;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -40,7 +42,11 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 ------------------------------------------------------------------------------------------------ */
 
 const allUpperCase = (arr) => {
-  // Solution code here...
+  const myArray = [];
+  arr.forEach(str => {
+    myArray.push(str.toUpperCase());
+  })
+  return myArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -54,11 +60,15 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  // Solution code here...
-};
-
+  return word.toUpperCase() + '!';
+  };
+  
 const speaker = (words, callback) => {
-  // Solution code here...
+  const qArray = [];
+  
+  words.forEach(word => qArray.push(callback(word)));
+
+  return qArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -78,12 +88,16 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  // Solution code here...
-};
-
-const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
-};
+  arr.push(value);
+  };
+  
+  const addNumbers = (num, arr, times, callback) => {
+    for (let i=0; i < times; i++) {
+      callback(arr, num);
+    };
+      return arr;
+    }
+    addNumbers(8, [], 5, addValues)
 
 /* ------------------------------------------------------------------------------------------------
 
