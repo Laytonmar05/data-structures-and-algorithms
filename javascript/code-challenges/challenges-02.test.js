@@ -7,10 +7,12 @@ CHALLENGE 1 - Review
 Write a function named raisedToTheThird that takes in an array of numbers and returns a new array of each of those numbers raised to the 3rd power (hint: look up Math.pow()). Use forEach to solve this problem.
 
 ------------------------------------------------------------------------------------------------ */
-
 const raisedToTheThird = (arr) => {
-  // Solution code here...
-};
+  const newArray = [];
+   arr.forEach(num => newArray.push(Math.pow(num, 3)));
+
+   return newArray;
+ };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -29,7 +31,7 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 ------------------------------------------------------------------------------------------------ */
 
 const addQuestion = (arr) => {
-  return arr.map()
+   return arr.map(str => str + '?');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -43,8 +45,7 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 ------------------------------------------------------------------------------------------------ */
 
 const forLoopTwoToThe = (arr) => {
-  const newArray = [];
-
+  const  newArray = [];
   for (let i in arr) {
     newArray.push(Math.pow(2, arr[i]));
   }
@@ -57,13 +58,10 @@ CHALLENGE 5
 Write a function named forEachTwoToThe that produces the same output as your forLoopTwoToThe function from challenge 4, but uses forEach instead of a for loop.
 ------------------------------------------------------------------------------------------------ */
 
+
 const forEachTwoToThe = (arr) => {
   const newArray = [];
-
-  arr.forEach(num => {
-    newArray.push(Math.pow(2, num));
-  });
-
+  arr.forEach(num => newArray.push(Math.pow(2, num)));
   return newArray;
 };
 
