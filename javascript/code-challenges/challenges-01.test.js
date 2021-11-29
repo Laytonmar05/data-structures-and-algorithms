@@ -41,6 +41,7 @@ Write a function named `allUpperCase` that takes an array of strings, and return
 Use `forEach` to loop over the input array. The modified strings should each be added into a local array. Return that local array.
 ------------------------------------------------------------------------------------------------ */
 
+
 const allUpperCase = (arr) => {
   const myArray = [];
   arr.forEach(str => {
@@ -60,6 +61,7 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
+
   return word.toUpperCase() + '!';
   };
   
@@ -117,6 +119,7 @@ The inventory is formatted like this:
 This function should use forEach to populate your grocery list based on the store's inventory. If the item is available, add it to your list. Return the final list.
 ------------------------------------------------------------------------------------------------ */
 
+
 const createList = (availableItems) => {
   const newArray = [];
 
@@ -128,6 +131,7 @@ const createList = (availableItems) => {
     });
    return newArray;
     };
+
 
 /* ------------------------------------------------------------------------------------------------
 STRETCH - CHALLENGE 7
