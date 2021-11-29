@@ -26,11 +26,13 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 
 const addExclamation = (arr) => {
   const localArray = [];
+  // Use `forEach` to loop over the input array.
   arr.forEach(str => {
- localArray.push(str + '!');
+    localArray.push(str + '!');
   });
   return localArray;
 };
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -59,14 +61,17 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  const wArray = [];
-  word.forEach(str => {
-    wArray.push(str.toUpperCase + '!'());
-  })
-   return wArray;
+
+  return word.toUpperCase() + '!';
   };
+  
+const speaker = (words, callback) => {
+  const qArray = [];
+  
+  words.forEach(word => qArray.push(callback(word)));
 
-
+  return qArray;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -85,19 +90,16 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  value.push(arr);
+  arr.push(value);
   };
   
   const addNumbers = (num, arr, times, callback) => {
-    const theArray = [];
-    arr.forEach(num => theArray.push(num + 1));
-  for (let i=0; i<theArray.length; i++) {
-  function hold(callback) {
-    callback.addNumbers();
-  }
-  }
-  return theArray;
-  };
+    for (let i=0; i < times; i++) {
+      callback(arr, num);
+    };
+      return arr;
+    }
+    addNumbers(8, [], 5, addValues)
 
 /* ------------------------------------------------------------------------------------------------
 
@@ -119,18 +121,17 @@ This function should use forEach to populate your grocery list based on the stor
 
 
 const createList = (availableItems) => {
-  const array (name: 'apples', available: true ),
-  { name: 'pears', available: true },
-  { name: 'oranges', available: false },
-  { name: 'bananas', available: true },
-  { name: 'blueberries', available: false }
+  const newArray = [];
 
+   availableItems.forEach(item => {
+     if (item.available === true){
+       newArray.push(item.name);
+     }
    
-    availableItems.forEach(array.length > i; array.push(i));
-  
-})
-return availableItems;
-};
+    });
+   return newArray;
+    };
+
 
 /* ------------------------------------------------------------------------------------------------
 STRETCH - CHALLENGE 7
