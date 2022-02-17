@@ -44,8 +44,8 @@ console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 
 const appendFirstToLast = (arr) => {
-  arr.push(arr[0])
-  
+  arr.push(arr[0])  
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -74,11 +74,11 @@ console.log(people[1].isAuthor) prints true
 ------------------------------------------------------------------------------------------------ */
 
 const setStatusAsAuthor = (people) => {
-people.forEach(person => {
-  person.isAuthor = true;
-})
-  
-};
+  people.forEach(person => {
+    person.isAuthor = true;
+  })
+    
+  };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
@@ -93,9 +93,9 @@ console.log(a) prints [1, 2, 3, 4]
 ------------------------------------------------------------------------------------------------ */
 
 const append = (arr1, arr2) => {
-  while (arr2.length) {
-    arr1.push(arr2.shift());
-  }
+while (arr2.length) {
+   arr1.push(arr2.shift());
+ }
 
 };
 
